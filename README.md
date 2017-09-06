@@ -9,6 +9,7 @@ Otherwise you can just can download/copy the screenshot.gd from the scripts fold
 
 ### Script variables/Settings
 
+![Image](settings.png)
 - Shortcut Action: The name of an action from the Input Map that should trigger the screenshot creation.
 - File Prefix: An optional prefix for the filenames, you can leave it empty. 
 - File Tag: At the moment you can choose between two timestamps that becomes part of the file name. 1. A simple date + time stamp or 2. A unix timestamp.
