@@ -23,10 +23,11 @@ func _input(event):
 		make_screenshot()
 
 func make_screenshot():
-	get_viewport().queue_screen_capture()
+	get_viewport().set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
 	yield(get_tree(), "idle_frame")
 	yield(get_tree(), "idle_frame")		
-	var image = get_viewport().get_screen_capture()
+	var image = get_viewport().get_texture().get_data()
+	image.flip_y()
 
 	_update_tags()
 	image.save_png("%s%s%s_%s.png" % [output_path, file_prefix, _tag, _index])
